@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;  // Usa mayúsculas consistentemente
 
 // Ruta para el formulario de entrada
 app.get('/', (req, res) => {
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 // Ruta que muestra el resultado
 app.get('/mostrar', (req, res) => {
-    // Aquí podrías procesar los datos, pero en este ejercicio solo servimos la página de resultado
+    // Envía el archivo resultado.html (descomentado)
     res.sendFile(path.join(__dirname, 'resultado.html'));
 });
 
