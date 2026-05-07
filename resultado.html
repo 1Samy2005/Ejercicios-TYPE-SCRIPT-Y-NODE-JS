@@ -1,0 +1,30 @@
+<!-- Captura el parámetro 'animal' de la URL y lo muestra -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado: Tu Animal Favorito</title>
+    <style>
+        /* Tus estilos CSS van aquí... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Increíble elección!</h1>
+        <p>Tu animal favorito es:</p>
+        <!-- Aquí se mostrará el animal dinámicamente -->
+        <div class="animal-name" id="animalDisplay">Cargando...</div>
+        <a href="/">Volver a intentar</a>
+    </div>
+
+    <script>
+        // Obtiene el nombre del animal de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const animal = urlParams.get('animal');
+        if (animal) {
+            document.getElementById('animalDisplay').textContent = animal;
+        }
+    </script>
+</body>
+</html>
